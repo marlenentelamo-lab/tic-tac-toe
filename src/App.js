@@ -23,7 +23,7 @@ function Board({ xIsNext, squares, onPlay }) {
     onPlay(nextSquares);
   }
 
-   const winner = calculateWinner(squares);
+  const winner = calculateWinner(squares);
   let status;
   if (winner) {
     status = 'Winner: ' + winner;
@@ -92,9 +92,9 @@ export default function Game() {
     <div className="game">
       <div className="game-board">
         <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
+        <button className="reset-button" onClick={resetGame}>Reset Game</button>
       </div>
       <div className="game-info">
-        <button onClick={resetGame}>Reset Game</button>
         <ol>{moves}</ol>
       </div>
     </div>
@@ -114,9 +114,9 @@ function calculateWinner(squares) {
   ];
   for (let i = 0; i < lines.length; i++) {
     const [a, b, c] = lines[i];
-    if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
-      return squares[a];
-    }
+   if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
+  return squares[a];
+}
   }
   return null;
 }

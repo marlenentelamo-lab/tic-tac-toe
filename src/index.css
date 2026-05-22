@@ -95,7 +95,7 @@ body {
   margin-left: 20px;
 }
 
-.game-info button, .button {
+button {
   color: rgb(73, 21, 21);;
   background: rgb(249, 249, 65);
   border: 2px solid rgb(73, 21, 21);
@@ -105,6 +105,8 @@ body {
   font-size: 15px;
 }
 
-button {
-  
+.game-board button {
+  color: rgb(73, 21, 21);;
+  background: rgb(249, 249, 65);
+  border: 2px solid rgb(73, 21, 21);
 }
